@@ -3,6 +3,8 @@
         name:'Menu'
     Apresentacao:
         name:"Apresentacao"
+    Cardapio:
+        name: "Cardapio"
     Pagamento:
         name:"Pagamento"
 
@@ -12,28 +14,50 @@
         padding: 70
         spacing: 10
         Image: 
-            source: 'beer2.jpg'
+            source: 'CervejariaTT.jpg'
             size_hint_y: None
             height: 300
             allow_stretch: True
         Button:
             size_hint: .4, 1
             pos_hint:{'x': .3}
-            text:'Apresentação'
+            text:'CARDAPIO'
             on_release:
-                app.root.current= 'Apresentacao'
-        Button:
-            size_hint: .4, 1
-            pos_hint:{'x': .3}
-            text:'Pagamento'
-            on_release:
-                app.root.current= 'Pagamento'
+                app.root.current= 'Cardapio'
+
         Button:
             size_hint: .4, 1
             pos_hint:{'x': .3}
             text:'Sair'
             on_release: app.stop()
-
+<Cardapio>:
+    BoxLayout:
+        orientation:'vertical'
+        padding: 60
+        spacing: 10
+        Image: 
+            source: 'buffet.jpg'
+            size_hint_y: None
+            height: 240
+            width: 300
+            allow_stretch: True
+        Button:
+            size_hint: .4, 1
+            pos_hint:{'x': .3}
+            text:'Buffet'
+            on_release:
+                app.root.current= 'Buffet'
+        Image: 
+            source: 'Bar.jpg'
+            size_hint_y: None
+            height: 240
+            allow_stretch: True
+        Button:
+            size_hint: .4, 1
+            pos_hint:{'x': .3}
+            text:'Bar'
+            on_release:
+                app.root.current= 'Apresentacao'
 <Apresentacao>:
     GridLayout:
         cols:4
