@@ -1,0 +1,195 @@
+<Gerenciador>:
+    Menu:
+        name:'Menu'
+    Apresentacao:
+        name:"Apresentacao"
+    Pagamento:
+        name:"Pagamento"
+
+<Menu>:
+    BoxLayout:
+        orientation:'vertical'
+        padding: 70
+        spacing: 10
+        Image: 
+            source: 'beer2.jpg'
+            size_hint_y: None
+            height: 300
+            allow_stretch: True
+        Button:
+            size_hint: .4, 1
+            pos_hint:{'x': .3}
+            text:'Apresentação'
+            on_release:
+                app.root.current= 'Apresentacao'
+        Button:
+            size_hint: .4, 1
+            pos_hint:{'x': .3}
+            text:'Pagamento'
+            on_release:
+                app.root.current= 'Pagamento'
+        Button:
+            size_hint: .4, 1
+            pos_hint:{'x': .3}
+            text:'Sair'
+            on_release: app.stop()
+
+<Apresentacao>:
+    GridLayout:
+        cols:3
+        spacing:15
+        padding:20   
+
+        ProgressBar:
+            id: pb
+            max: 100
+            value: 0
+        Label:
+            text: ""
+            font_size: 20
+            color:(0,0,1,1)
+        Label:
+            text: "Selecionar Produto"
+            font_size: 20
+            color:(0,0,1,1)
+            id:lb5
+
+        Label:
+            text: "Não clicado1"
+            font_size: 20
+            color:(0,0,1,1)
+            id:lb1
+        CheckBox:
+            on_active: root.on_checkbox_Active1(self,self.active)
+        Image:
+            source:'maltadas.jpg'
+            size_hint_y: None
+            height:50
+            allow_stretch: True
+
+        Label:
+            text: "Não clicado2"
+            font_size: 20
+            color:(0,0,1,1)
+            id:lb2
+        CheckBox:
+            on_active: root.on_checkbox_Active2(self,self.active)
+        Image:
+            source:'maltadas.jpg'
+            size_hint_y: None
+            height:50
+            allow_stretch: True
+
+        Label:
+            text: "Não clicado3"
+            font_size: 20
+            color:(0,0,1,1)
+            id:lb3
+        CheckBox:
+            on_active: root.on_checkbox_Active3(self,self.active)
+        Image:
+            source:'maltadas.jpg'
+            size_hint_y: None
+            height:50
+            allow_stretch: True
+
+        Label:
+            text: "Não clicado4"
+            font_size: 20
+            color:(0,0,1,1)
+            id:lb4
+        CheckBox:
+            on_active: root.on_checkbox_Active4(self,self.active)
+        Image:
+            source:'maltadas.jpg'
+            size_hint_y: None
+            height:50
+            allow_stretch: True
+
+
+        Label:
+            text: ""
+        Label:
+            text: ""
+        Button:
+            text:'Voltar'
+            font_size: 25
+            size_hint_x: .5
+            size_hint_y: .5
+            width: 50
+            on_release: app.root.current = 'Menu'
+                  
+<Pagamento>:
+
+    GridLayout:
+        cols:3
+        spacing:10
+        padding:15   
+    
+        Label:
+            text:' '    
+        Image:
+            source:'molson.jpg'
+            size_hint_y: None
+            height:200
+            allow_stretch: True
+        Label:
+            text:' '
+
+        Label:
+            text:' '
+        Label:
+            id: escolha
+            text:'Selecione modo de pagamento:'
+        Spinner:
+            id:spn
+            text: 'Opções'
+            height:50
+            values: ['Cartão de Crédito', 'Boleto', 'Tranferência / Pix']
+            on_text: root.spinner_Clicado(self.text)
+
+        BoxLayout:
+            size_hint_y: None
+            height: 40
+            Button:
+                text:'Adicionar'
+                size_hint_x: None
+                width: 70
+                on_release: root.addComponentes()
+            TextInput:
+                id: tarefa
+                font_size: 20
+                background_color: (.25, .25, 1, 1)
+                text:'R$ '
+
+
+        Label:
+            text:' '        
+        Label:
+            text:' '        
+        ScrollView:
+            BoxLayout:
+                id: box
+                orientation:'vertical'
+                size_hint_y: None #quando coloca o componente na caixa faz com que eles nao tem tamanho fixo
+                height: self.minimum_height
+
+        Label:
+            text:' '
+        Button:
+            text:'Voltar'
+            size_hint_y: None
+            font_size: 25
+            on_release: app.root.current = 'Menu'
+
+<Funcoes>:
+    size_hint_y: None
+    height: 80
+    Label:
+        id:lab1
+    Button:
+        text: 'X'
+        size_hint_y: None
+        width: 40
+        on_release:
+            app.root.get_screen('Pagamento').ids.box.remove_widget(root) 
