@@ -9,7 +9,7 @@ class Gerenciador(ScreenManager):
 class Menu(Screen):
     pass
 
-class Cardapio(Screen):
+# class Cardapio(Screen):
     
 
 class Apresentacao(Screen): 
