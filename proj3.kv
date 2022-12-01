@@ -12,27 +12,23 @@
         padding: 70
         spacing: 10
         Image: 
-            source: 'beer2.jpg'
+            source: 'CervejariaTT.jpg'
             size_hint_y: None
             height: 300
             allow_stretch: True
         Button:
             size_hint: .4, 1
             pos_hint:{'x': .3}
-            text:'Apresentação'
+            text:'CARDAPIO'
             on_release:
                 app.root.current= 'Apresentacao'
         Button:
             size_hint: .4, 1
             pos_hint:{'x': .3}
-            text:'Pagamento'
-            on_release:
-                app.root.current= 'Pagamento'
-        Button:
-            size_hint: .4, 1
-            pos_hint:{'x': .3}
             text:'Sair'
             on_release: app.stop()
+
+Menu
 
 <Apresentacao>:
     GridLayout:

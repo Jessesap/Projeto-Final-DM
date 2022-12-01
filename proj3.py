@@ -9,6 +9,9 @@ class Gerenciador(ScreenManager):
 class Menu(Screen):
     pass
 
+class Cardapio(Screen):
+    
+
 class Apresentacao(Screen): 
     def on_checkbox_Active1(self, checkboxInstance, isActive):
         if isActive:
