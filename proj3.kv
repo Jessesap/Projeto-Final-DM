@@ -67,14 +67,14 @@
         Label:
             text: "Stout Beer"
             font_size: 20
-            color:(0,0,1,1)
+            color:(0,1,1,1)
             id:lb1
         CheckBox:
             on_active: root.on_checkbox_Active1(self,self.active)
         Label:
             text: "R$ 19,90"
             font_size: 20
-            color:(0,0,1,1)
+            color:(0,1,1,1)
             id:lbpreco1
         Image:
             source:'stout2.jpg'
@@ -85,14 +85,14 @@
         Label:
             text: "IPA Beer"
             font_size: 20
-            color:(0,0,1,1)
+            color:(0,1,1,1)
             id:lb2
         CheckBox:
             on_active: root.on_checkbox_Active2(self,self.active)
         Label:
             text: "R$ 14,90"
             font_size: 20
-            color:(0,0,1,1)
+            color:(0,1,1,1)
             id:lbpreco2
         Image:
             source:'ipa1.jpg'
@@ -103,14 +103,14 @@
         Label:
             text: "Weiss Beer"
             font_size: 20
-            color:(0,0,1,1)
+            color:(0,1,1,1)
             id:lb3
         CheckBox:
             on_active: root.on_checkbox_Active3(self,self.active)
         Label:
             text: "R$ 17,90"
             font_size: 20
-            color:(0,0,1,1)
+            color:(0,1,1,1)
             id:lbpreco3
         Image:
             source:'weiss1.jpg'
@@ -121,14 +121,14 @@
         Label:
             text: "Porter Beer"
             font_size: 20
-            color:(0,0,1,1)
+            color:(0,1,1,1)
             id:lb4
         CheckBox:
             on_active: root.on_checkbox_Active4(self,self.active)
         Label:
             text: "R$ 22,90"
             font_size: 20
-            color:(0,0,1,1)
+            color:(0,1,1,1)
             id:lbpreco4
         Image:
             source:'porter1.jpg'
@@ -145,11 +145,19 @@
             width: 50
             on_release: app.root.current = 'Menu'
         Label:
-            text: ""
+            text: "Total Selecionado"
+            font_size: 20
+            color:(0,1,1,1)
+            id:lb4
         Label:
             text: ""
-        Label:
-            text: ""
+        Button:
+            text:'Proximo'
+            font_size: 25
+            size_hint_x: .5
+            size_hint_y: .5
+            width: 50
+            on_release: app.root.current = 'Cardapio'
                   
 <Pagamento>:
 
