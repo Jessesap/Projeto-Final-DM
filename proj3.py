@@ -9,7 +9,7 @@ class Gerenciador(ScreenManager):
 class Menu(Screen):
     pass
 
-class Appresentacao(Screen): 
+class Apresentacao(Screen): 
     def on_checkbox_Active1(self, checkboxInstance, isActive):
         if isActive:
             self.ids.pb.value += 25
