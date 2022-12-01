@@ -36,81 +36,83 @@
 
 <Apresentacao>:
     GridLayout:
-        cols:3
-        spacing:15
-        padding:20   
-
-        ProgressBar:
-            id: pb
-            max: 100
-            value: 0
-        Label:
-            text: ""
-            font_size: 20
-            color:(0,0,1,1)
-        Label:
-            text: "Selecionar Produto"
-            font_size: 20
-            color:(0,0,1,1)
-            id:lb5
+        cols:4
+        spacing:10
+        padding:10   
 
         Label:
-            text: "Não clicado1"
+            text: "Stout Beer"
             font_size: 20
             color:(0,0,1,1)
             id:lb1
         CheckBox:
             on_active: root.on_checkbox_Active1(self,self.active)
+        Label:
+            text: "R$ 19,90"
+            font_size: 20
+            color:(0,0,1,1)
+            id:lbpreco1
         Image:
-            source:'maltadas.jpg'
+            source:'stout2.jpg'
             size_hint_y: None
-            height:50
+            height:100
             allow_stretch: True
 
         Label:
-            text: "Não clicado2"
+            text: "IPA Beer"
             font_size: 20
             color:(0,0,1,1)
             id:lb2
         CheckBox:
             on_active: root.on_checkbox_Active2(self,self.active)
+        Label:
+            text: "R$ 14,90"
+            font_size: 20
+            color:(0,0,1,1)
+            id:lbpreco2
         Image:
-            source:'maltadas.jpg'
+            source:'ipa1.jpg'
             size_hint_y: None
-            height:50
+            height:100
             allow_stretch: True
 
         Label:
-            text: "Não clicado3"
+            text: "Weiss Beer"
             font_size: 20
             color:(0,0,1,1)
             id:lb3
         CheckBox:
             on_active: root.on_checkbox_Active3(self,self.active)
+        Label:
+            text: "R$ 17,90"
+            font_size: 20
+            color:(0,0,1,1)
+            id:lbpreco3
         Image:
-            source:'maltadas.jpg'
+            source:'weiss1.jpg'
             size_hint_y: None
-            height:50
+            height:100
             allow_stretch: True
 
         Label:
-            text: "Não clicado4"
+            text: "Porter Beer"
             font_size: 20
             color:(0,0,1,1)
             id:lb4
         CheckBox:
             on_active: root.on_checkbox_Active4(self,self.active)
+        Label:
+            text: "R$ 22,90"
+            font_size: 20
+            color:(0,0,1,1)
+            id:lbpreco4
         Image:
-            source:'maltadas.jpg'
+            source:'porter1.jpg'
             size_hint_y: None
-            height:50
+            height:100
             allow_stretch: True
 
 
-        Label:
-            text: ""
-        Label:
-            text: ""
         Button:
             text:'Voltar'
             font_size: 25
@@ -118,6 +120,12 @@
             size_hint_y: .5
             width: 50
             on_release: app.root.current = 'Menu'
+        Label:
+            text: ""
+        Label:
+            text: ""
+        Label:
+            text: ""
                   
 <Pagamento>:
 
