@@ -5,7 +5,8 @@ from kivy.uix.screenmanager import ScreenManager, Screen
 
 class Gerenciador(ScreenManager):
     pass
-
+class Cardapio(Screen):
+    pass
 class Menu(Screen):
     pass
 
