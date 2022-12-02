@@ -3,6 +3,8 @@
         name:'Menu'
     Apresentacao:
         name:"Apresentacao"
+    Buffet:
+        name:"Buffet"
     Cardapio:
         name: "Cardapio"
     Pagamento:
@@ -158,7 +160,109 @@
             size_hint_y: .5
             width: 50
             on_release: app.root.current = 'Cardapio'
+
+<Buffet>:
+    GridLayout:
+        cols:4
+        spacing:10
+        padding:10   
+
+        Label:
+            text: "Filé Bovino"
+            font_size: 20
+            color:(0,1,1,1)
+            id:lb5
+        CheckBox:
+            on_active: root.on_checkbox_Active1(self,self.active)
+        Label:
+            text: "R$ 15,90"
+            font_size: 20
+            color:(0,1,1,1)
+            id:lbpreco5
+        Image:
+            source:'carneBovina.jpg'
+            size_hint_y: None
+            height:100
+            allow_stretch: True
+
+        Label:
+            text: "Filé Suino"
+            font_size: 20
+            color:(0,1,1,1)
+            id:lb6
+        CheckBox:
+            on_active: root.on_checkbox_Active2(self,self.active)
+        Label:
+            text: "R$ 14,90"
+            font_size: 20
+            color:(0,1,1,1)
+            id:lbpreco6
+        Image:
+            source:'lombinho.jpg'
+            size_hint_y: None
+            height:100
+            allow_stretch: True
+
+        Label:
+            text: "Franbacon"
+            font_size: 20
+            color:(0,1,1,1)
+            id:lb7
+        CheckBox:
+            on_active: root.on_checkbox_Active3(self,self.active)
+        Label:
+            text: "R$ 18,90"
+            font_size: 20
+            color:(0,1,1,1)
+            id:lbpreco3
+        Image:
+            source:'franbacon.jpg'
+            size_hint_y: None
+            height:100
+            allow_stretch: True
+
+        Label:
+            text: "Queijo Coalho"
+            font_size: 20
+            color:(0,1,1,1)
+            id:lb8
+        CheckBox:
+            on_active: root.on_checkbox_Active4(self,self.active)
+        Label:
+            text: "R$ 16,90"
+            font_size: 20
+            color:(0,1,1,1)
+            id:lbpreco4
+        Image:
+            source:'queijoCoalho.jpg'
+            size_hint_y: None
+            height:100
+            allow_stretch: True
+
+
+        Button:
+            text:'Voltar'
+            font_size: 25
+            size_hint_x: .5
+            size_hint_y: .5
+            width: 50
+            on_release: app.root.current = 'Menu'
+        Label:
+            text: "Total Selecionado"
+            font_size: 20
+            color:(0,1,1,1)
+            id:lb4
+        Label:
+            text: ""
+        Button:
+            text:'Proximo'
+            font_size: 25
+            size_hint_x: .5
+            size_hint_y: .5
+            width: 50
+            on_release: app.root.current = 'Cardapio'
                   
+
 <Pagamento>:
 
     GridLayout:
