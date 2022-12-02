@@ -2,7 +2,6 @@ from kivy.app import App
 from kivy.uix.relativelayout import RelativeLayout
 from kivy.uix.boxlayout import BoxLayout
 from kivy.uix.screenmanager import ScreenManager, Screen
-
 class Gerenciador(ScreenManager):
     pass
 class Cardapio(Screen):
@@ -12,6 +11,7 @@ class Buffet(Screen):
             if isActive:
                 #self.ids.pb.value += 25
                 self.ids.lb1.text = "Item Selecionado1"
+                
             else:
                 self.ids.lb1.text = "Nenhuma Seleção" 
                 
@@ -73,11 +73,13 @@ class Menu(Screen):
 # class Cardapio(Screen):
     
 
-class Apresentacao(Screen): 
+class Apresentacao(Screen):
+    vlTotal = 0
     def on_checkbox_Active1(self, checkboxInstance, isActive):
         if isActive:
             #self.ids.pb.value += 25
-            self.ids.lb1.text = "Stout Selecionada"
+            self.vlTotal = self.vlTotal + 19.90
+            self.ids.lb4.text = str (self.vlTotal)
         else:
             self.ids.lb1.text = "Não Selecionado" 
             
@@ -92,7 +94,8 @@ class Apresentacao(Screen):
     def on_checkbox_Active2(self, checkboxInstance, isActive):
         if isActive:
             #self.ids.pb.value += 25
-            self.ids.lb2.text = "IPA Selecionada"
+            self.vlTotal = self.vlTotal + 22.90
+            self.ids.lb4.text = str (self.vlTotal)
         else:
             self.ids.lb2.text = "Não Selecionado" 
             
