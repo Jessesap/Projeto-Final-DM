@@ -52,22 +52,41 @@ class Apresentacao(Screen):
         if isActive:
             self.ids.lb2.text = "IPA Selecionada"
             #self.ids.pb.value += 25
-            self.vlTotal = self.vlTotal + 22.90
+            self.vlTotal = self.vlTotal + 14.90
             self.ids.lb4.text = str (self.vlTotal)
         else:
             self.ids.lb2.text = "Não Selecionado"      
              
     def on_checkbox_Active3(self, checkboxInstance, isActive):
         if isActive:
-            self.ids.lb3.text = "Weiss Selecionada"
+        #    self.ids.pb.value += 25
+            self.vlTotal = self.vlTotal + 17.90
+            self.ids.lb4.text = str (self.vlTotal)
         else:
             self.ids.lb3.text = "Não Selecionado"   
     
     def on_checkbox_Active4(self, checkboxInstance, isActive):
         if isActive:
-            self.ids.lb4.text = "Porter Selecionada"
-        else:
-            self.ids.lb4.text = "Não Selecionado"          
+        #    self.ids.pb.value += 25
+            self.vlTotal = self.vlTotal + 22.90
+            self.ids.lb4.text = str (self.vlTotal)
+            
+        #if self.ids.pb.value == 100:
+        #        self.ids.lb5.text = "Total de itens atingido!"
+        #else:
+        #    if self.ids.pb.value == 75:
+        #        self.ids.lb5.text = "Um item para fechar o pedido"
+        #    else:
+        #        self.ids.lb5.text = "Itens permitidos por pedido: 4"  
+    
+        # def checa_pedido(self):
+        #     if self.ids.pb.value == 100:
+        #             self.ids.lb5.text = "Total de itens por pedido atingido!"
+        #     else:
+        #         if self.ids.pb.value == 75:
+        #             self.ids.lb5.text = "Aviso: falta um item para fechar o pedido"
+        #         else:
+        #             self.ids.lb5.text = "Itens permitidos por pedido: 4"         
 
 class Pagamento(Screen):
     def __init__(self, atividades = [], **kwargs):
