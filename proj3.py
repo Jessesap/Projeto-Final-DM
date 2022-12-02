@@ -94,7 +94,7 @@ class Apresentacao(Screen):
     def on_checkbox_Active2(self, checkboxInstance, isActive):
         if isActive:
             #self.ids.pb.value += 25
-            self.vlTotal = self.vlTotal + 22.90
+            self.vlTotal = self.vlTotal + 14.90
             self.ids.lb4.text = str (self.vlTotal)
         else:
             self.ids.lb2.text = "Não Selecionado" 
@@ -110,7 +110,8 @@ class Apresentacao(Screen):
     def on_checkbox_Active3(self, checkboxInstance, isActive):
         if isActive:
         #    self.ids.pb.value += 25
-            self.ids.lb3.text = "Weiss Selecionada"
+            self.vlTotal = self.vlTotal + 17.90
+            self.ids.lb4.text = str (self.vlTotal)
         else:
             self.ids.lb3.text = "Não Selecionado" 
             
@@ -125,9 +126,8 @@ class Apresentacao(Screen):
     def on_checkbox_Active4(self, checkboxInstance, isActive):
         if isActive:
         #    self.ids.pb.value += 25
-            self.ids.lb4.text = "Porter Selecionada"
-        else:
-            self.ids.lb4.text = "Não Selecionado" 
+            self.vlTotal = self.vlTotal + 22.90
+            self.ids.lb4.text = str (self.vlTotal)
             
         #if self.ids.pb.value == 100:
         #        self.ids.lb5.text = "Total de itens atingido!"
